@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Kisan Loan Application Form</title>
+<link></link>
+<style>
+.KCC {
+  border: 0px outset black;
+  background-color: #dcdcdc;    
+  text-align:left;
+}
+th, td {
+  text-align:right;  }
+</style>
+</head>
+
+<body>
+<form action="action_page.php" method= "post">
+  <fieldset style="text-align:center;font-size:90%;">
+    <legend><b>For Office use only</b></legend>
+    <label for="no.">Application No.</label>
+    <input type="text" id="no." name="no." value="20114010" readonly><br>  
+    <label>Category of the Applicant:</label>
+    <input type="radio" id="small" name="small" value="small">
+    <label for="small">SF</label>
+    <input type="radio" id="medium" name="medium" value="medium" checked>
+    <label for="medium">MF</label>
+    <input type="radio" id="others" name="others" value="others">
+    <label for="others">Others</label><br>
+    <label for="date">Application Date:</label>
+    <input type="text" id="date" name="date" value="21-02-2021"><br>
+  </fieldset>
+<h4 style="text-align:center; background-color:#dcdcdc;">LOAN APPLICATION FORM FOR AGRICULTURE CREDIT UNDER <br>(KISAN POWER/KISAN SAMPOORNA / KISAN RIN SAHAYATA/KISAN MATSYA)</h4> 
+
+<fieldset style="text-align:left; font-size:90%;">
+  <legend><b>A.&nbsp&nbsp KCC/KYC details</b></legend>
+
+<div class=KCC  style="width: 49%;text-align:justify; float:left; height:170px; margin:1px; padding:10px">
+<b>KCC details:</b><br>
+   <table><tr>
+    <td>&nbsp&nbspMark your current status:&nbsp<input type="radio" id="fresh" name="fresh" value="fresh"> Issue of fresh KCC</td>
+    <td><input type="radio" id="existing" name="existing" value="existing"> Enhancement</td>
+    <td><input type="radio" id="active" name="active" value="active"> Activation of KCC account<br></td></tr>
+    </table>
+   Type of Kisan Credit Card:
+    <input type="radio" id="cash" name="cash" value="cash"> <label for="cash">Cash Credit</label>
+    <input type="radio" id="loan" name="loan" value="loan"> <label for="loan">Term Loan</label><br>   
+    <table>     
+     <tr><td>Account Number:</td><td><input type="text" id="acc" name="acc"></td></tr>    
+     <tr><td>IFSC Code:</td><td><input type="text" id="IFSC" name="IFSC"></td></tr>    
+     <tr><td>Amount of Loan required:</td> <td><input type="text" id="amount" name="amount"></td></tr>   
+    </table></div>
+
+<div class=KCC style="width: 47%; float:right; height:170px;  margin:0px; padding:10px">
+<b>KYC details:</b><br>  <i>(if you do not have KCC details fill any 2 requirements below)</i><br><br>
+    <table>
+    <tr><td>Adhaar Number:</td> <td><input type="text" id="adhaar" name="adhaar"></td></tr>
+    <tr><td>Passport Id Number:</td> <td><input type="text" id="pin" name="pin"></td></tr>
+    <tr><td>Voter Id Number:</td> <td><input type="text" id="voterId" name="voterId"></tr>
+    <tr><td>Driving License Number:</td> <td><input type="text" id="dl" name="dl"></td></tr>
+    <tr><td>F-NREGA Job Card Number:</td> <td><input type="text" id="F-NREGA" name="F-NREGA"></td></tr> 
+   </table></div>
+</fieldset>
+<br>  
+
+<fieldset style="font-size:90%;">
+ <legend><b>B.&nbsp&nbsp  Particulars of the applicant</b></legend>
+    <div class=KCC style="width: 51%; float:left; height:150px; margin:0px; padding:10px">
+    <i>If covered under any of these scheme:</i><br>
+    Pardhan Mantra Suraksha Bima Yojana (PMSBY)</td> &nbsp &nbsp&nbsp <td><input type="checkbox" id="PMSBY" name="PMSBY"><br>
+    Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)</td> <td><input type="checkbox" id="PMJJBY" name="PMJJBY"><br><br>
+    <table>
+    <tr><td>Name of the Applicant:</td> <td><input type="text" id="name" name="name"></td></tr>
+    <tr><td>PM Kisan Beneficiary Account Number:</td> <td><input type="text" id="beneficiary" name="beneficiary"></td></tr>
+    <tr><td>Number of Dependents:</td> <td> <input type="text" id="dependents" name="dependents" ></td></tr>
+    </table><br> </div>  
+
+   <div class=KCC style="width: 45.5%; float:left; height:150px; margin:0px; padding:10px">
+    &nbsp&nbspHave any Bank Account: 
+    <input type="radio" id="Y" name="Y" value="Yes"> <label for="Y">Yes</label>
+    <input type="radio" id="N" name="N" value="No"> <label for="N">No</label><br>
+    &nbsp&nbsp<i>(if yes enter below)</i><br><br>
+    <table>
+    <tr><td>Nationality:</td> <td> <input type="text" id="nationality" name="nationality"></td></tr>
+    <tr><td>Residential Address:</td> <td> <input type="text" id="residential" name="residential" ></td></tr>
+    <tr><td>Communication Address:</td> <td> <input type="text" id="communication" name="communication"></td></tr>
+    <tr><td>Mobile Number:</td> <td> <input type="text" id="mobile number" name="mobile number"></td></tr>
+    </table>   </div>
+</fieldset>
+<br>
+
+<fieldset style="font-size:90%;">
+  <legend><b>C. &nbsp&nbsp Details of existing loans, if any:</b></legend>
+<div class=KCC style="width: 23%; float:left; height:20px; margin:0px; padding:10px">
+    <label for="bank">Bank</label> <input type="checkbox" id="bank" name="bank" >
+    &nbsp  <label for="co_bank"> Co-operative Banks</label> <input type="checkbox" id="co_bank" name="co_bank" >
+    &nbsp  <label for="o">Others</label> <input type="checkbox" id="o" name="o"> </div>
+<div class=KCC style="width: 23%; float:left; height:20px; margin:0px; padding:10px">
+    &nbsp  <label for="bname">Branch Name:</label> <input type="text" id="bname" name="bname" size="15"></div>
+<div class=KCC style="width: 25%; float:left; height:20px; margin:0px; padding:10px">
+    <label for="Oamount">Outstanding Amount:</label> <input type="text" id="Oamount" name="Oamount" size="15"> </div>
+<div class=KCC style="width: 22.3%; float:left; height:20px; margin:0px; padding:10px">
+    <label for="overdues">Overdues:</label> <input type="text" id="overdues" name="overdues" size="15"></div>
+</fieldset>
+
+<br>
+<fieldset style="font-size:90%;">
+  <legend><b>D.&nbsp&nbsp  Total land holdings and crops:</b></legend>
+<div class=KCC style="width: 51%; float:left; height:90px; margin:0px; padding:10px">
+    <table>
+    <tr><td>Locational Name of Land Holding:</td> <td> <input type="text" id="Land" name="Land" size="15"></td></tr>
+    <tr><td>Survey/Khasra Number:</td> <td> <input type="text" id="Khasra" name="Khasra" size="15"></td></tr>
+    <tr><td>Area in Acres:</td> <td><input type="text" id="area" name="area" size="15"></td></tr></table></div>
+<div class=KCC style="width: 45.5%; float:left; height:90px; margin:0px; padding:10px">
+     Land Holding:<br>
+     <label for="owe">Owned</label> <input type="checkbox" id="owe" name="owe" >
+     &nbsp  &nbsp <label for="lease">Leased</label> <input type="checkbox" id="lease" name="lease" >
+     &nbsp  &nbsp <label for="sc">Share Cropping</label> <input type="checkbox" id="sc" name="sc"><br><br>
+     Name of Crop to be Grown:<br>
+     <label for="k">Kharif</label> <input type="checkbox" id="k" name="k" >
+     &nbsp  &nbsp <label for="r">Rabi</label> <input type="checkbox" id="r" name="r" >
+     &nbsp  &nbsp <label for="s">Others</label> <input type="checkbox" id="s" name="s"> </div>    
+</fieldset>
+
+<br>
+<fieldset style="font-size:90%;">
+  <legend><b>E.&nbsp&nbsp  Loan requests for Fisheries and Animal Husbandry:</b></legend>
+<div class=KCC style="width: 51%; float:left; height:95px; margin:0px; padding:10px">
+    <table>
+    <tr><td>Locational Name of Land Holding:</td> <td> <input type="text" id="Land" name="Land" size="15"></td></tr>
+    <tr><td>Number of Productive Dairy Animals:</td> <td> <input type="text" id="dairy" name="dairy" size="15" ></td></tr>
+    <tr><td>Total Sheep & Goat:</td> <td> <input type="text" id="sg" name="sg" size="15" ></td></tr>
+    <tr><td>Others:</td> <td><input type="text" id="oth" name="oth" size="15"></td></tr> </table></div>
+<div class=KCC style="width: 45.5%; float:left; height:95px; margin:0px; padding:10px">
+    <table>
+    <tr><td>Total Pigs:</td> <td> <input type="text" id="p" name="p" size="15"></td></tr>
+    <tr><td>Total Poultry:</td> <td> <input type="text" id="po" name="po" size="15"></td></tr>
+    <tr><td>Inland Fisheries & Aquaculture:</td> <td>  <input type="text" id="Aqua" name="Aqua" size="15"></td></tr>
+    <tr><td>Marine Fisheries & Mariculture:</td> <td>  <input type="text" id="Marine" name="Marine" size="15s"></td></tr></table></div> 
+</fieldset>
+
+<br>
+<fieldset style="font-size:90%;">
+  <legend><b>F.&nbsp&nbsp  Summary of other farm assets owned by farmer:</b></legend>
+  <textarea name="message" rows="4" cols="163">Type summary here...</textarea>
+</fieldset>
+
+<br>
+<fieldset style="font-size:90%;">
+  <legend><b>G.&nbsp&nbsp  Security Proposed to be offered:</b></legend>
+<div class=KCC style="width: 50%; float:left; height:20px; margin:0px; padding:10px">
+    <label for="bname">Particulars of Primary Security offered:</label> <input type="text" id="bname" name="bname" size="25"></div>
+<div class=KCC style="width: 46.5%; float:left; height:20px; margin:0px; padding:10px">
+    <label for="bname">Particulars of Collateral Security (where applicable):</label> <input type="text" id="bname" name="bname" size="25"></div>
+</fieldset>
+
+<br>
+<fieldset style="font-size:90%;">
+  <legend><b>H.&nbsp&nbsp  Declaration:</b></legend>
+<div style="background-color: #dcdcdc;padding:8px">I/ We hereby declare that all information furnished by me/us is true, correct and complete to the best of my/our knowledge and belief. I/We
+hereby undertake to abide by the terms and conditions that the Bank may stipulate in sanction of this loan and inform Bank in the event of
+acquiring any other assets during the tenure of the advance. I/ We hereby declare that I/We have not availed KCC from any other bank branch.</div><br>
+<div class=KCC style="width: 16%; float:left; height:15px; margin:0px; padding:6px""><b>Signature/ Thumb impression:</b> </div>
+<div style="width: 80%; float:right;"><input type="button" onclick="uploaded" value="Upload here"></div><br>
+</fieldset>
+
+<br>
+<fieldset style="text-align:center; font-size:90%;">
+  <legend><b>Acknowledgement of Loan application</b></legend>
+<div style="background-color:#dcdcdc; padding:8px; text-align:left">We acknowledge that we have received an application dated …………………from Mr. /Ms. ………………………………………………………………….. Residence of …………………………………… 
+for a loan of ₹. ……………… under Kisan Credit Card and decision on sanction or rejection shall be communicated within 30 days from receipt 
+of this application & all other relevant particulars by Bank. All the required information/ documents have been furnished on ………………… / yet 
+to be furnished by the applicant. The applicant is in receipt of the indicative Interest Rate, Processing Fees & Other Charges that would 
+be applicable, if the Bank grants the facility. </div><br>
+<div class=KCC style="width: 15%; float:right; height:20px; margin:0px; padding:10px;"><b>Date:<input type="text" id="date" name="date" size="15"><br></div>
+<div class=KCC style="width: 11%; float:left; height:15px; margin:0px; padding:6px;"><b>Signature of Officer:</div>
+
+</fieldset>
+<p style="text-align:center";><input type="submit" value="Submit" >  <input type="reset"></p>
+</form>
+
+</body>
+</html>
