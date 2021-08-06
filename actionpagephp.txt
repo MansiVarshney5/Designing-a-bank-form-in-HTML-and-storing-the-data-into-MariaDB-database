@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+  2 <html>
+  3
+  4
+  5
+  6 <head>
+  7 <style>
+  8 table, th, td {
+  9     border: 1px solid black;
+ 10 }
+ 11 </style>
+ 12 </head>
+ 13
+ 14 <body>
+ <?php
+ $servername = "gssl.iitk.ac.in";
+ $username = "vmansi20";
+ $password = "vmansi20";
+ $dbname = "vmansi20";
+ 
+ $connect=mysqli_connect($servername, $username, $password, $dbname);
+ 
+ 23 //$db = mysql_select_db("dbname",$connect);
+ 24 $appno=$_POST['20114010'];
+ 25 $name=$_POST['name'];
+ 26 $adhaar=$_POST['adhaar'];
+ 27 $beneficiary=$_POST['beneficiary'];
+ 28 $mobile=$_POST['mobile'];
+ 29 $IFSC=$_POST['IFSC'];
+ 30 $amount=$_POST['amount'];
+ 31 $dependents=$_POST['dependents'];
+ 32 $Oamount=$_POST['Oamount'];
+ 33 $overdues=$_POST['overdues'];
+ 34 $area=$_POST['area'];
+ 35 $dairy=$_POST['dairy'];
+ 36
+ 37 $query1="INSERT INTO zApplicants(AppNo, Name, AdhaarNo, PMKB, mobile, IFSC, amt, dep, outamt, overdue, land, animal) VALUES ('$appno', ' $name', '$adhaar    ', '$beneficiary', '$mobile', '$IFSC', '$amount', '$dependents', '$Oamount', '$overdues', '$area', '$dairy')";
+ 38 $result1=e
+ 39
+ 40 $query2="SELECT AppNo, Name, AdhaarNo, PMKB, mobile, IFSC, amt, dep, outamt, overdue, land, animal FROM zApplicants";
+ 41 $result2=$connect->query($query2);
+ 42
+$txt1 = "Applicant's details:";
+ 44 echo "<h2>" . $txt1 . "</h2>";
+ 45
+ 46 echo "<table><tr><th>Applicant Number</th><th>Name of Applicant</th><th>Aadhar Number</th><th>PM Kisan Beneficiary No</th><th>Mobile No</th><th> IFSC cod    e</th><th>Amount of Loan required</th><th>Number of Dependents</th><th>Outstanding Amount</th><th>Overdues</th><th>Land Area(acres)</th><th>Total no. of     Animals owned</th></tr>";
+ 47 while($row = mysqli_fetch_assoc($result2))// get one record at a time
+ 48 {
+ 49     echo "<tr><td>" . $row["AppNo"]. "</td><td>" . $row["Name"] ."</td><td>" . $row["AdhaarNo"] ."</td><td>" . $row["PMKB"] ."</td><td>" .$row["mobile"]     . "</td><td>" . $row["IFSC"] . "</td><td>" . $row["amt"] . $row["dep"] . "</td><td>" . $row["outamt"] . $row["overdue"] . $row["land"] . "</td><td>" . $r    ow["animal"]."</td></tr>";
+ 50   //  echo"<br/>"; //print one row at a time
+ 51 }
+ 52 echo "</table>";
+ 53
+ mysqli_close($connect);
+ ?>
+ 56
+ 57 </body>
+ 58 </html>
